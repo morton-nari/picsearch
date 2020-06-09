@@ -50,7 +50,7 @@ class Pics extends Component {
     return (
       <div>
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-          <div id="navbarSupportedContent" className="collapse navbar-collapse">
+          <div id="navbarSupportedContent">
             <form className="form-inline my-2 my-lg-0 ">
               <input
                 type="text"
