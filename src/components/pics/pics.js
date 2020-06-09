@@ -18,6 +18,7 @@ class Pics extends Component {
       this.fetchRes(query);
     });
     console.log(query);
+    event.preventDefault();
   };
   fetchRes = (query) => {
     let url = `https://api.unsplash.com/search/photos?query=${query}&client_id=whPLL1RmFWkLGkqXQQ0_r7HWtjXCpWaGCQge6T3xVPs`;
@@ -51,16 +52,15 @@ class Pics extends Component {
       <div>
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
           <div id="navbarSupportedContent">
-            <form className="form-inline my-2 my-lg-0 ">
-              <input
-                type="text"
-                value={query}
-                name="query"
-                aria-label="search"
-                className="form-control mr-sm-2"
-                onChange={this.keyUpText}
-              />
-            </form>
+            <input
+              type="text"
+              value={query}
+              name="query"
+              aria-label="search"
+              className="form-control mr-sm-2"
+              onChange={this.keyUpText}
+            />
+
           </div>
         </nav>
         <div className="card-columns mt-5 loader-height">
